@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<VBox fx:id="vbox1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtest.tp1_poo.MainAppController">
+   <children>
+      <Pane fx:id="pane1" prefHeight="64.0" prefWidth="800.0">
+         <children>
+            <TextField fx:id="textfield1" layoutX="62.0" layoutY="13.0" prefHeight="33.0" prefWidth="315.0" promptText="Rechercher des objets volés entrer le numéro de série..." />
+            <Line endX="-71.0" layoutX="122.0" layoutY="22.0" startX="-100.0" stroke="WHITE" strokeWidth="2.0" />
+            <Line endX="-71.0" layoutX="122.0" layoutY="30.0" startX="-100.0" stroke="WHITE" strokeWidth="2.0" />
+            <Line endX="-71.0" layoutX="123.0" layoutY="38.0" startX="-100.0" stroke="WHITE" strokeWidth="2.0" />
+            <Button fx:id="button1" layoutX="381.0" layoutY="13.0" mnemonicParsing="false" onAction="#rechercherElt" prefHeight="30.0" prefWidth="31.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@loupe.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="button3" layoutX="745.0" layoutY="9.0" mnemonicParsing="false" onAction="#refresh2">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@synchroniser.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <MenuButton layoutX="685.0" layoutY="11.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Aucune notification de vol reçue pour l'instant" />
+              </items>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cloche.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuButton>
+         </children>
+      </Pane>
+      <HBox prefHeight="498.0" prefWidth="800.0">
+         <children>
+            <VBox fx:id="vbox2" prefHeight="495.0" prefWidth="124.0">
+               <children>
+                  <Button fx:id="button2" mnemonicParsing="false" onAction="#refresh1" prefHeight="28.0" prefWidth="93.0" text="Rafraichir">
+                     <VBox.margin>
+                        <Insets left="18.0" top="30.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="button4" mnemonicParsing="false" onAction="#signaler" text="Signaler">
+                     <VBox.margin>
+                        <Insets left="31.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <ScrollPane prefHeight="495.0" prefWidth="677.0">
+               <content>
+                  <VBox fx:id="vbox_affichage" prefHeight="710.0" prefWidth="658.0">
+                     <children>
+                        <HBox fx:id="hbox5" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@pc/asustufa15.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label text="Label">
+                                 <HBox.margin>
+                                    <Insets right="30.0" top="40.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text="Label">
+                                 <HBox.margin>
+                                    <Insets right="30.0" top="40.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text="Label">
+                                 <HBox.margin>
+                                    <Insets right="10.0" top="40.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label prefHeight="20.0" prefWidth="159.0" text="Déclarée comme volée" textFill="RED">
+                                 <HBox.margin>
+                                    <Insets top="40.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children></VBox>
+               </content>
+            </ScrollPane>
+         </children></HBox>
+      <Pane fx:id="pane3" prefHeight="47.0" prefWidth="800.0">
+         <children>
+            <Label fx:id="label1" layoutX="615.0" layoutY="12.0" prefHeight="20.0" prefWidth="171.0" text="BROCANDE DE KENNEDY" />
+         </children></Pane>
+   </children>
+</VBox>
